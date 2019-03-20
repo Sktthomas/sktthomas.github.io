@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recap media</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style type="text/css">
+        .commentbox{
+            border:  solid black;
+            background-color: grey;
+            padding: auto;
+        }
+        #inputField{
+            background-color: powderblue;
+            height: 10vh;
+            width: 50vh;
+        ;
+        }
+    </style>
+</head>
+<body>
+<img class="image" src="https://hips.hearstapps.com/ghk.h-cdn.co/assets/17/30/1500925839-golden-retriever-puppy.jpg" alt="">
+<br>
+<input id="inputField" placeholder="Write a nice thing">
+<br>
+<div class="commentbox">
+
+</div>
+<script>
+    //TODO handle on enter key pressed for input
+    //TODO get value from input
+    //TODO get value on top of comment
+    //TODO clear input box
+   /* $('#inputField').keypress(function(event) {
+        if (event.keyCode == 13) 13 er enter-keyen! {
+            $("#inputField").val();
+        }
+    });*/
+
+var count = 0
+   $("#inputField").keydown(function(event){
+       if(event.keyCode === 13) {
+           console.log("key pressed value of field is:", event.target.value);
+           $(".commentbox").prepend("<br>")
+           $(".commentbox").prepend(event.target.value);
+           $("#inputField").empty();
+           count++;
+       }
+    })
+    $("img").width("200px");
+    $("img").height("200px");
+
+</script>
+</body>
+</html>
