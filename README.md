@@ -2,7 +2,7 @@
 My wall or whatever some better descriptor
 
 
-[My project](https://skttomas.github.io)
+[My project](https://sktthomas.github.io)
 
 Please be nice
 
